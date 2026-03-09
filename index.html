@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topup Site</title>
+
+<style>
+
+body{
+margin:0;
+background:black;
+overflow:hidden;
+}
+
+#splash{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+#splash video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+#main{
+display:none;
+text-align:center;
+padding:40px;
+font-family:Arial;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Splash Screen -->
+<div id="splash">
+
+<video autoplay muted>
+<source src="assets/splash_video.mp4" type="video/mp4">
+</video>
+
+<audio id="splashSound" autoplay>
+<source src="assets/splash_sound.mp3" type="audio/mp3">
+</audio>
+
+</div>
+
+<!-- Main Website -->
+<div id="main">
+
+<h1>Welcome to Topup Site</h1>
+<p>Game Topup Service</p>
+
+</div>
+<script>
+
+// 14 second পরে home.html open হবে
+
+setTimeout(function(){
+
+window.location.href = "home.html";
+
+},14000);
+</script>
+
+</body>
+</html>
